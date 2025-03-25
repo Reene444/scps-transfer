@@ -21,6 +21,8 @@ fi
 
 if [[ $(echo "$SCPS_FILE" | wc -l) -ne 1 ]]; then
   echo "Error: Multiple .scps files found in the project root."
+  echo "Files in current directory:"
+  ls -la
   echo "::set-output name=transfer-status::Error: Multiple .scps files found."
   exit 1
 fi
